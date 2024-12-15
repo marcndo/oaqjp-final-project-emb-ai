@@ -4,7 +4,6 @@ authors current state
 import requests
 import json
 
-
 def emotion_detector(text_to_analyze):
     """Classify emotions expressed in text.
     Parameters:
@@ -15,3 +14,5 @@ def emotion_detector(text_to_analyze):
     doc = {"raw_document": {"text": text_to_analyze}}
     response = requests.post(url, headers=headers, json=doc, timeout=10)
     
+    # convert to dictionary
+    respond_dict = json.loads(response.text)
