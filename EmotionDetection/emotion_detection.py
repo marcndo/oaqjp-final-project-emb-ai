@@ -26,6 +26,5 @@ def emotion_detector(text_to_analyze):
     # Find the dominant emotion 
     dominant_emotion = max(required_emotions, key=required_emotions.get) 
     output = { "text": text_to_analyze, "emotions": required_emotions, "dominant_emotion": dominant_emotion } 
+
     return output
-
-
